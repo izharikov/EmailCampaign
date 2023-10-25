@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
   res.send("Express on Vercel");
 });
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get("/templates/sample", (req, res) => {
     res.sendFile(path.join(__dirname, '/templates/sample/index.html'));
