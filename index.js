@@ -1,24 +1,12 @@
-import express from 'express';
-import path from 'path';
+const express = require('express');
+const path = require('path');
 
-import {
+const {
   getLatestQuestions
-} from './routes/latestQuestions.js';
-
-import {
+} = require('./routes/latestQuestions.js');
+const {
   render
-} from './services/renderService.js';
-
-import {
-  fileURLToPath
-} from 'url';
-import {
-  dirname
-} from 'path';
-
-const __filename = fileURLToPath(
-  import.meta.url);
-const __dirname = dirname(__filename);
+} = require('./services/renderService.js');
 
 // Initialize Express
 const app = express();
@@ -73,3 +61,5 @@ app.use(clientErrorHandler)
 app.listen(5000, () => {
   console.log("Running on port 5000.");
 });
+
+module.exports = app;
