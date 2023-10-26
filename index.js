@@ -30,6 +30,11 @@ app.get("/api/latestQuestions", async (req, res) => {
 
 app.get('/api/templates/latest-questions', async (req, res, next) => {
   try {
+    if (req.query["forceStatus"]) {
+      res.status(+req.query["forceStatus"]);
+      res.end();
+      return;
+    }
     const json = await getLatestQuestions();
     res.setHeader('Content-Type', 'text/html');
     const data = await render('latestQuestions', json);
