@@ -9,7 +9,7 @@
     </mj-section>
     <mj-section padding="0">
       <mj-column padding="0">
-        <mj-text>Explore latest questions.</mj-text>
+        <mj-text>Hi Dear #recipient:name|Subscriber#! Explore latest questions:</mj-text>
       </mj-column>
     </mj-section>
     <mj-section>
