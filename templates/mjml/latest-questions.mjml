@@ -1,0 +1,30 @@
+<mjml>
+  <mj-body>
+    <mj-section>
+      <mj-column background-color="rgb(237, 245, 253)">
+        <mj-text align="center" font-size="20px" color="rgb(27, 117, 208)">
+          Sitecore
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0">
+      <mj-column padding="0">
+        <mj-text>Hi Dear #recipient:name|Subscriber#! Explore latest questions:</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column>
+        {{#items}}
+          <mj-divider border-color="rgb(227, 230, 232)"></mj-divider>
+          <mj-text font-size="25px"><a href="{{this.link}}" style="color: rgb(27, 117, 208);">{{this.title}}</a></mj-text>
+          <mj-text>
+            {{#tags}}
+              <p style="display: inline-block; padding: 5px 10px; background-color: rgb(237, 245, 253); color: rgb(21, 92, 162)">{{this}}</p>
+            {{/tags}}
+          </mj-text>
+        {{/items}}
+        <mj-divider border-color="rgb(227, 230, 232)"></mj-divider>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
